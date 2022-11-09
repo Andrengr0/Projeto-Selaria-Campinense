@@ -133,49 +133,158 @@ section.apresentacion h2{
     max-width: 500px;
 }
 
-.slides-container{
-    width: 100%;
-    padding-top: 60%;
-    background-color: #ccc;
+
+/* ************************************ */
+
+.carrosel {
+    -webkit-perspective: 250px;
+    -moz-perspective: 250px;
+    width: 400px;
+    height: 200px;
+    top: 50px;
     position: relative;
-    overflow: auto;
+    margin: 0 auto;
 }
 
-.slides-container > .slides-bullets{
+@-webkit-keyframes efeitoCarrosel {
+    from {
+        -webkit-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -webkit-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes efeitoCarrosel {
+    from {
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+.caixa__card {
+    width: 90px;
+    height: 100px;
+    background-color: #442222;
     position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 190px;
-    height: 16px;
-    text-align:center;
-}
-
-.slides-bullets > span{
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    background-color: #ccc;
-    z-index: 3;
-    margin: 0 6px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.slides-container-wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 600%;
     display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    top: 35px;
+    left: 125px;
+    font-size: 9px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    text-align: center;
+    -webkit-animation-name: efeitoCarrosel;
+    -moz-animation-name: efeitoCarrosel;
+    -webkit-animation-duration: 16s;
+    -moz-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
 }
 
-.slides-single{
-    width: calc(600% / 6);
-    padding-top: 10.2%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+.caixa__card:hover {
+    border: solid #4466cc 3px;
+    box-shadow: 0px 0px 10px #4466cc;
 }
+
+.caixa__card.cc__1 {
+    -webkit-animation-delay: -14s;
+    -moz-animation-delay: -14s;
+    background-image: url(../images-produtos/redeas01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__2 {
+    -webkit-animation-delay: -12s;
+    -moz-animation-delay: -12s;
+    background-image: url(../images-produtos/brida-alagoana.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__3 {
+    -webkit-animation-delay: -10s;
+    -moz-animation-delay: -10s;
+    background-image: url(../images-produtos/luva-vaquejada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__4 {
+    -webkit-animation-delay: -8s;
+    -moz-animation-delay: -8s;
+    background-image: url(../images-produtos/caneleira-cavalo-SCpro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__5 {
+    -webkit-animation-delay: -6s;
+    -moz-animation-delay: -6s;
+    background-image: url(../images-produtos/sela01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__6 {
+    -webkit-animation-delay: -4s;
+    -moz-animation-delay: -4s;
+    background-image: url(../images-produtos/peitoral-esteira.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__7 {
+    -webkit-animation-delay: -2s;
+    -moz-animation-delay: -2s;
+    background-image: url(../images-produtos/brida-alagoana.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caixa__card.cc__8 {
+    background-image: url(../images-produtos/luva-vaquejada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ************************************ */
 
 
 .box-texto{
@@ -211,6 +320,10 @@ section.apresentacion h2{
 
     .content-apresentacion{
         display: block;
+    }
+
+    .box-texto{
+        margin-top: 50px;
     }
 }
 
@@ -327,6 +440,26 @@ section.localizacao{
 }
 
 
+/* ========== Section Sobre ========== */
+
+section.sobre{
+    text-align: center;
+}
+
+.sobre h3{
+    margin-top: 30px;
+    font-size: 18px;
+    color: #343434;
+}
+
+.sobre p{
+    margin: 0 auto;
+    max-width: 900px;
+    color: #616161;
+    margin-top: 15px;
+    text-align: justify;
+}
+
 /* ========== Botão Voltar ao topo ========== */
 
 .btn-voltar-topo{
@@ -437,7 +570,7 @@ footer h4{
 }
 
 .produto-content-wrapper{
-    padding-top: 120%;
+    padding-top: 100%;
     position: relative;
 }
 
@@ -448,6 +581,8 @@ footer h4{
     top: 0;
     left: 0;
     /* background-color: #AC9100; */
+    border: 3px solid #ccc;
+    border-radius: 0 0 10px 10px;
 }
 
 .produto-content img{
