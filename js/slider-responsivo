@@ -1,0 +1,12 @@
+$(()=>{
+
+    $('.mais-vendidos .slider-produtos').slick({
+        arrows: false,
+        centerMode: false,
+        slidesToShow: 6,
+        dots: false,
+        infinity: true,
+        autoplay: true,
+        autoplaySpeed: 3000
+    });
+})
