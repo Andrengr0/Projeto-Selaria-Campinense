@@ -113,7 +113,6 @@ section.apresentacion{
 }
 
 section.apresentacion h1{
-    color: #AC9100;
     font-size: 16px;
 }
 section.apresentacion h2{
@@ -377,7 +376,7 @@ section.mais-vendidos{
     font-size: 16px;
 }
 
-.slider-produto-single .box-img{
+.mais-vendidos .slider-produto-single .box-img{
     width: 100%;
     height: 220px;
     background-image: url(../images-produtos/redeas01.jpg);
@@ -420,16 +419,23 @@ section.mais-vendidos{
     background-size: cover;
 }
 
-@media screen and (max-width: 768px){
-    .w33{
-        width: 50%;
+@media screen and (max-width: 540px){
+
+    .mais-vendidos > .line-titulo{
+        padding-bottom: 40px;
     }
 }
 
-@media screen and (max-width: 480px){
-    .w33{
-        width: 100%;
-    }
+
+/* ============== Section Produtos Semanais =============== */
+
+.pedidos-semanais .slider-produto-single .box-img{
+    width: 100%;
+    height: 220px;
+    background-image: url(../images-produtos/peitoral-esteira.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 

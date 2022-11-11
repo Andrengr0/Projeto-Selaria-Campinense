@@ -8,7 +8,83 @@ $(()=>{
         dots: false,
         infinity: true,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2500,
+        responsive:[
+            {
+                breakpoint:1080,
+                settings:{
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 940,
+                settings:{
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 768,
+                settings:{
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 540,
+                settings:{
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 400,
+                settings:{
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+    $('.pedidos-semanais .slider-produtos').slick({
+        arrows: true,
+        centerMode: false,
+        centerPadding: '60px',
+        slidesToShow: 6,
+        dots: false,
+        infinity: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive:[
+            {
+                breakpoint:1080,
+                settings:{
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 940,
+                settings:{
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 768,
+                settings:{
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 540,
+                settings:{
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 400,
+                settings:{
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
 })
