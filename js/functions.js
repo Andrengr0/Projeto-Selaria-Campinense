@@ -14,23 +14,6 @@ $(()=>{
 
     const colors = ['#AC9100', '#ff0000']
 
-    // animarTitulo();
-    
-    function animarTitulo(){
-        var i = 0;
-        setInterval(function(){
-            if(i == 0){
-                $('.apresentacion h1').css('color',colors[0]);
-                i++;
-            }else{
-                $('.apresentacion h1').css('color',colors[1]);
-                i == 0;
-            }
-        },1500)
-    }
-
-
-
     var i = 0;
     setInterval(function(){
       $('.apresentacion h1').css('color', colors[i]);
