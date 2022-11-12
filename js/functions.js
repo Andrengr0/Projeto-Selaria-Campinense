@@ -18,7 +18,7 @@ $(()=>{
     setInterval(function(){
       $('.apresentacion h1').css('color', colors[i]);
       i = (i == (colors.length -1)) ? 0 : i+1;
-    },1500);
+    },1000);
 
     
 })

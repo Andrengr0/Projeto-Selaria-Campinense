@@ -26,6 +26,7 @@
 
 html,body{
     height: 100%;
+    overflow-x: hidden;
 }
 
 /* ============= Cabeçalho do site ==============*/
@@ -330,10 +331,6 @@ section.apresentacion h2{
 
 /* ============== Section Mais Vendidos ============ */
 
-section.mais-vendidos{
-    margin-top: 50px;
-}
-
 .line-titulo{
     width: 100%;
     position: relative;
@@ -355,13 +352,73 @@ section.mais-vendidos{
     font-size: 18px;
 }
 
-.box-produtos{
+.box-produtos-mv{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-.box-produtos-mv{
-    position: relative;
+.box-produto-single{
+    border: 10px solid #ffffff;
+    border-radius: 8px;
 }
+
+.wdt{
+    width: calc(100% / 5);
+}
+
+.produto-single{
+    width: 100%;
+    height: auto;
+    background-color: rgb(210, 219, 233);
+    border-radius: 8px;
+}
+
+.produto-single img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.produto-single h3{
+    text-align: center;
+    color: rgb(46, 46, 46);
+    margin-top: 6px;
+    padding-bottom: 8px;
+}
+
+
+@media screen and (max-width: 900px){
+
+    .wdt{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 680px){
+
+    .wdt{
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .wdt{
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 540px){
+
+    .mais-vendidos > .line-titulo{
+        padding-bottom: 40px;
+    }
+}
+
+
+/* ============== Section Produtos Semanais =============== */
 
 .slider-produto-single{
     width: 190px;
@@ -376,14 +433,6 @@ section.mais-vendidos{
     font-size: 16px;
 }
 
-.mais-vendidos .slider-produto-single .box-img{
-    width: 100%;
-    height: 220px;
-    background-image: url(../images-produtos/redeas01.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .slick-prev{
     background: transparent;
@@ -418,16 +467,6 @@ section.mais-vendidos{
     height: 30px;
     background-size: cover;
 }
-
-@media screen and (max-width: 540px){
-
-    .mais-vendidos > .line-titulo{
-        padding-bottom: 40px;
-    }
-}
-
-
-/* ============== Section Produtos Semanais =============== */
 
 .pedidos-semanais .slider-produto-single .box-img{
     width: 100%;

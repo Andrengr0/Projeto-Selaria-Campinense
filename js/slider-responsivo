@@ -3,12 +3,11 @@ $(()=>{
     $('.mais-vendidos .slider-produtos').slick({
         arrows: true,
         centerMode: false,
-        centerPadding: '60px',
         slidesToShow: 6,
         dots: false,
         infinity: true,
         autoplay: true,
-        autoplaySpeed: 2500,
+        autoplaySpeed: 2000,
         responsive:[
             {
                 breakpoint:1080,
@@ -35,7 +34,7 @@ $(()=>{
                 }
             },
             {
-                breakpoint: 400,
+                breakpoint: 390,
                 settings:{
                     slidesToShow: 1
                 }
