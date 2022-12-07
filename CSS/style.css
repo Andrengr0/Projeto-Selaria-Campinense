@@ -701,6 +701,12 @@ footer h4{
     padding: 10px;
 }
 
+.categoria-selas{
+    background-color: #000;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
 .dpn{
     display: none;
 }
@@ -727,13 +733,14 @@ footer h4{
 
 .produto-content{
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
     /* background-color: #AC9100; */
     border: 3px solid #ccc;
     border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
 }
 
 .produto-content img{
@@ -741,6 +748,7 @@ footer h4{
     max-height: 80%;
 }
 .produto-content p{
+    margin-bottom: 10px;
     font-size: 14px;
     padding: 6px 3% 0 3%;
     font-weight: bold;
